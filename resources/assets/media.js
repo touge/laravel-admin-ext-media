@@ -11,6 +11,9 @@ function preview(url) {
 }
 
 function processSelectedFile(file, id) {
-    $("#media-" + id).val(file)
-    $('#preview-' + id).html(preview(file));
+    $('input[data-id="media-'+id+'"]').val(file)
+    // $("#media-" + id).val(file)
+    // $('#preview-' + id).html(preview(file));
+    $('div[data-id="preview-'+id+'"]').html(preview(file))
+    // $('#preview-' + id).html(preview(file));
 }
